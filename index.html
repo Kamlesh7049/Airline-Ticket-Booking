@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISB L29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <button>Feacturs</button>
+        <button>request a Demo</button>
+        <button>Signup Free</button>
+    </nav>
+    <header>
+        <h1>AIRLINE TICKET BOOKING</h1>
+        <br>
+        <p>we build an airline booking system that provides the ultimate online salse tool for tour
+            operrators.<br>contact travelopro for fully  integreted air ticketing  software!
+        </p>
+             <br>
+             <button>Start your free trial</button>
+             <!-- <div>
+                <p><i class="fa-solid fa-hotel"></i><br> hotels</p>
+                <p><i class="fa-solid fa-plane-departure"></i><br> hotels</p>
+                <p><i class="fa-solid fa-handshake"></i><br> hotels</p>
+                <p><i class="fa-solid fa-ship"></i><br> hotels</p>
+                <p><i class="fa-solid fa-bus"></i><br> hotels</p>
+               <p><i class="fa-solid fa-train"></i><br> hotels</p>
+             </div> -->
+    </header>
+    <!-- <div class="midle">
+        <p><i class="fa-solid fa-hotel"></i><br> hotels</p>
+        <p><i class="fa-solid fa-plane-departure"></i><br> hotels</p>
+        <p><i class="fa-solid fa-handshake"></i><br> hotels</p>
+        <p><i class="fa-solid fa-ship"></i><br> hotels</p>
+        <p><i class="fa-solid fa-bus"></i><br> hotels</p>
+       <p><i class="fa-solid fa-train"></i><br> hotels</p>
+    </div> -->
+
+    <section id="booking-form">
+        <h2>Book Your Flight</h2>
+        <form id="flightForm">
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" placeholder="City or Airport" required>
+
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" placeholder="City or Airport" required>
+
+            <label for="departure">Departure Date:</label>
+            <input type="date" id="departure" name="departure" required>
+
+            <label for="return">Return Date (optional):</label>
+            <input type="date" id="return" name="return">
+
+            <label for="passengers">Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1" max="10" required>
+
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+            </select>
+
+            <button type="submit" >Book Flight</button>
+        </form>
+    </section>
+
+    <section id="bookings">
+        <h2>Your Bookings</h2>
+        <table id="bookingTable">
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Departure Date</th>
+                    <th>Return Date</th>
+                    <th>Passengers</th>
+                    <th>Class</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </section>
+
+    <script src="Script.js"></script>
+</body>
+</html>

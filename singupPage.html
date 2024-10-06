@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Sign Up</h1>
+        <form action="" onsubmit=" return savedata()">
+            <input type="text" placeholder="Username" id="unm">
+            <input type="text" placeholder="Mobile" id="mob">
+            <input type="text" placeholder="E-mail" id="eml">
+            <input type="password" placeholder="Password" id="pass">
+            <input type="password" placeholder="Confirm password" id="cpass">
+            <button type="submit" onclick="sub()">Sign Up </button>
+        </form>
+        <!-- <button>Sign Up </button> -->
+        <p>Already have an account</p>
+        <a href="/loginpage.html">
+            Login here
+        </a>
+    </div>
+    <script>
+
+        function savedata() {
+            let username = document.getElementById("unm").value;
+            let mobile = document.getElementById("mob").value;
+            let email = document.getElementById("eml").value;
+            let pass = document.getElementById("pass").value;
+            let cpass = document.getElementById("cpass").value;
+            // console.log(username,mobile,email,pass,cpass )
+            if (username == " ") {
+                alert("plese fill name !");
+                document.getElementById("unm").focus();
+                return false;
+            } else if (isNaN(mobile)) {
+                // alert("plese fill phone no only numeric !");
+                alert("only didgit phone section");
+                document.getElementById("mob").focus();
+                return false;
+            } else if (mobile.length < 10 || mobile.length > 10) {
+                // alert("plese fill phone no only numeric !");
+                alert("only 10 digits");
+                document.getElementById("mob").focus();
+                return false;
+            } else if (email == "") {
+                alert("plese fill email !");
+                document.getElementById("eml").focus();
+                return false;
+            } else if (!email.includes("@")) {
+                alert("plese fill email with @!");
+                document.getElementById("eml").focus();
+                return false;
+            }
+
+            else if (pass == "") {
+                alert("plese fill pass !");
+                document.getElementById("pass").focus();
+                return false;
+            }
+            else if (!pass.match(/[@#%&]/)) {
+                alert("plese fill pass with Symbol !");
+                document.getElementById("pass").focus();
+                return false;
+            }
+
+            else if (cpass == "") {
+                alert("plese fill cpass !");
+                document.getElementById("cpass").focus();
+                return false;
+            }
+
+            else if (pass !== cpass) {
+                alert("your pass not matched !");
+                document.getElementById("cpass").focus();
+                //when mismatched the pass then input box empty!
+                document.getElementById('pass').value = '';
+                document.getElementById('cpass').value = '';
+                return false;
+            }
+            else {
+                alert("data is ready to submit");
+                // window.open("Dashboard/Login/index.html");
+                window.location.href = "../Login/index.html";
+                return false;
+
+            }
+        }
+
+        function sub() {
+            let username = document.getElementById("unm").value;
+            let mobile = document.getElementById("mob").value;
+            let email = document.getElementById("eml").value;
+            let pass = document.getElementById("pass").value;
+            let cpass = document.getElementById("cpass").value;
+
+
+            let information = {
+                "username": username,
+                "mobile": mobile,
+                "email": email,
+                "password": pass,
+                "cpassword": cpass
+
+            }
+            let url = 'http://localhost:3000/registration';
+            let obj = {
+                method: "POST",
+                headers: {
+                    'content-type': 'apllication/json'
+
+                },
+                body: JSON.stringify(information)
+            }
+            fetch(url, obj)
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

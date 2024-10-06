@@ -1,0 +1,142 @@
+/* Set the background image for the whole page */
+body {
+
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(Flite22.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    background-color: rgb(250, 247, 247);
+    padding: 5px;
+    text-align: right;
+}
+
+.navbar button {
+    background-color: #efe8e8;
+    color: rgb(14, 88, 91);
+    border: 2px solid rgb(47, 171, 216);
+    text-align: right;
+    text-transform: capitalize;
+}
+
+header {
+    background-color: #2646e2;
+    /* color:rgb(54, 42, 73); */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-image: url(sonset.avif);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    font-size: x-large;
+    text-transform: capitalize;
+
+}
+
+header p {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+
+}
+header button {
+    font-size: large;
+    border-radius: 20px;
+    width: 300px;
+    padding: 10px;
+    background-color: dodgerblue;
+}
+
+.midle {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    background-color: rgb(45, 48, 51);
+    font-size: x-large;
+}
+
+
+#booking-form {
+    background-image: url('Flite2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+
+#booking-form,
+#bookings {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+}
+
+#booking-form form button {
+    align-items: center;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0033cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: #0055ff;
+    align-items: center;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: rgb(47, 32, 53);
+}
+
+.actions button {
+    margin-right: 5px;
+}
+
+#flightForm>button {
+    margin-left: 40%;
+}
